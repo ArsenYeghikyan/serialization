@@ -1,14 +1,15 @@
 package ex3;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Car {
+public abstract class Car implements Serializable {
 
-    private java.lang.String model;
+    private String model;
     private int price;
-    private Engine engine;
+    private  Engine engine;
 
-    public Car(java.lang.String model, int price, Engine engine) {
+    public Car(String model, int price, Engine engine) {
         this.model = model;
         this.price = price;
         this.engine = engine;
@@ -22,7 +23,7 @@ public abstract class Car {
         return model;
     }
 
-    public void setModel(java.lang.String model) {
+    public void setModel(String model) {
         this.model = model;
     }
 
@@ -43,11 +44,11 @@ public abstract class Car {
     }
 
     @Override
-    public java.lang.String toString() {
+    public String toString() {
         return "Car: " +
-                "\nModel: " + model +
-                "\nPrice: " + price +
-                "\nEngine: " + engine;
+                "\nModel: " + getModel() +
+                "\nPrice: " + getPrice() +
+                "\nEngine: " + getEngine();
     }
 
     @Override

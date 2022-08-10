@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class BMW extends Car implements Serializable {
     public int weight;
-    public BMW(java.lang.String model, int price, Engine engine, int weight) {
+    public BMW(String model, int price, Engine engine, int weight) {
         super(model, price, engine);
         this.weight = weight;
         System.out.println("child constructor");
@@ -34,7 +34,7 @@ public class BMW extends Car implements Serializable {
     }
 
     @Override
-    public java.lang.String toString() {
+    public String toString() {
         return super.toString()+
                 "\nWeight: " + weight;
     }

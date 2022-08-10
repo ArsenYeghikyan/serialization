@@ -5,14 +5,16 @@ import java.util.Objects;
 
 public class Student implements Serializable {
 
-     private String name;
+    private String name;
     private String lastName;
-     private int ID;
+    private int ID;
+    private Group group;
 
-    public Student(String name, String lastName, int age) {
+    public Student(String name, String lastName, int ID) {
         this.name = name;
         this.lastName = lastName;
-        this.ID = age;
+        this.ID = ID;
+
     }
 
     public Student() {
@@ -42,23 +44,33 @@ public class Student implements Serializable {
         return ID;
     }
 
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
     @Override
     public String toString() {
         return "Name: " + name +
-                "\nLastName: " + lastName  +
-                "\nAge: " + ID;
+                "\nLastName: " + lastName +
+                "\nAge: " + ID+"\nGroup: "+ group;
     }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return ID == student.ID && Objects.equals(name, student.name) && Objects.equals(lastName, student.lastName);
+        return ID == student.ID && Objects.equals(name, student.name) && Objects.equals(lastName, student.lastName) && Objects.equals(group, student.group);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, lastName, ID);
+        return Objects.hash(name, lastName, ID, group);
     }
 }

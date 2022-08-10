@@ -4,8 +4,13 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-
+Group group = new Group("Java");
         Student st = new Student("Arsen", "Yeghikyan", 34);
+        group.setStudent(st);
+        st.setGroup(group);
+
+
+
         File file = new File("C:\\Users\\Best\\IdeaProjects\\seiliz\\src\\ex1\\seriz11.txt");
 
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));

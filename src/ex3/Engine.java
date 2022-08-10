@@ -48,6 +48,6 @@ private String producer;
 
     @Override
     public java.lang.String toString() {
-        return "\nPower: " + power+"\nProducer: "+producer;
+        return "\nPower: " + getPower()+"\nProducer: "+getProducer();
     }
 }
