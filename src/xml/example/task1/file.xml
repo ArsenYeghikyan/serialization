@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--<!DOCTYPE catalog [-->
+<!--        <!ELEMENT catalog (book)*>-->
+<!--        <!ELEMENT book (author|title|price|genre|publish_date)*>-->
+<!--        <!ELEMENT author (#PCDATA)>-->
+<!--        <!ELEMENT title (#PCDATA)>-->
+<!--        <!ATTLIST title-->
+<!--                fontsize CDATA #REQUIRED>-->
+<!--        <!ELEMENT price (#PCDATA)>-->
+<!--        <!ATTLIST price-->
+<!--                currency CDATA #IMPLIED>-->
+<!--        <!ELEMENT genre (#PCDATA)>-->
+<!--        <!ELEMENT publish_date (#PCDATA)>-->
+<!--        ]>-->
+
+
+
+
+
+<catalog>
+
+    <book>
+        <author>Bruce Eckel</author>
+        <title fontsize="8">Thinking in Java 4th Edition</title>
+        <price currency="$">30</price>
+        <genre>Computer</genre>
+        <publish_date>2018/02/02</publish_date>
+    </book>
+
+    <book>
+        <author>Robert Martin</author>
+        <title fontsize="8">Clean Code</title>
+        <price currency="$">50</price>
+        <genre>Computer</genre>
+        <publish_date>2016/12/22</publish_date>
+    </book>
+
+
+</catalog>
